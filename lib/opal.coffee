@@ -15,6 +15,8 @@ vm = require 'vm'
 vm.runInThisContext(source, sourceFile)
 vm.runInThisContext(parser, parserFile)
 
+module.exports = Opal
+
 Opal.compile = (ruby, options = undefined) -> # Override function for now
   # Options can be Hash or plain JS
   if options and options.klass isnt Opal.Hash
